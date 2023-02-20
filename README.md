@@ -1,9 +1,10 @@
-# smd_1
+# Word-Pair-App Flutter
 
 A new Flutter project.
 
 ## Getting Started
 
+A simple, yet beautiful and responsive flutter application generating exciting & cool word pairs.
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
