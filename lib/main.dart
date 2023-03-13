@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'favourites_page.dart';
+import 'favouritesPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = GeneratorPage();
         break;
       case 1:
-        page = FavoritesPage();
+        page = Favourites(context);
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndexNum');
@@ -154,18 +154,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: NavigationRail(
                     trailing: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Center(child: Text('\n\nDeveloped By:\nSNOWLEOPARDS', style:  TextStyle(fontSize: 10, color: Colors.black54,fontWeight: FontWeight.bold))),
+                      child: Center(
+                        child: Container(
+                          margin: EdgeInsets.only(top: 100),
+                          child: Text(
+                            '\n\nDeveloped By:\nSNOWLEOPARDS',
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.black54,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
                     ),
-                    elevation: 20, //Creates a shadow
+                    elevation: 20,
+                    //Creates a shadow
                     // extended: false,
                     // extended: true,
                     extended: constraints.maxWidth >= 600,
                     // ← Added Here.
-                    destinations:[
+                    destinations: [
                       NavigationRailDestination(
                         icon: Icon(Icons.home),
                         label: Text('Home'),
-
                       ),
                       NavigationRailDestination(
                         icon: Icon(Icons.favorite),
