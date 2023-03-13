@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => MyAppState(), // Samgh nahe aya
+      create: (context) => MyAppState(),
+      // context is an object ob BuildContext,
+      //it stores the current state of the app by calling MyAppState constructor repeatitively
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Namer App',
@@ -38,8 +40,9 @@ class MyAppState extends ChangeNotifier {
   }
 
   // ↓ Added the code below.
-  var favorites = <WordPair>[]; // NEW THING: Array of type WordPair stored in variable
+  var favorites = <WordPair>[]; // NEW THING: List of type WordPair
   // var fav = new WordPair(); //Can't be Done
+  // var fav2 = WordPair; // FINE
 
   //You also added a new method, toggleFavorite(),
   // which either removes the current word pair from the list of favorites
@@ -127,9 +130,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     // ↓ Added the code below.
     Widget page;
+
     switch (selectedIndexNum) {
       case 0:
         page = GeneratorPage();
@@ -141,23 +144,28 @@ class _MyHomePageState extends State<MyHomePage> {
         throw UnimplementedError('no widget for $selectedIndexNum');
     }
 
-
-
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return Scaffold(
-          body: Row(
+    return LayoutBuilder(builder: (context, constraints) {
+      return Scaffold(
+        body: SafeArea(
+          child: Row(
             children: [
               SafeArea(
                 child: Expanded(
                   child: NavigationRail(
+                    trailing: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Center(child: Text('\n\nDeveloped By:\nSNOWLEOPARDS', style:  TextStyle(fontSize: 10, color: Colors.black54,fontWeight: FontWeight.bold))),
+                    ),
+                    elevation: 20, //Creates a shadow
                     // extended: false,
                     // extended: true,
-                    extended: constraints.maxWidth >= 600,  // ← Added Here.
-                    destinations: [
+                    extended: constraints.maxWidth >= 600,
+                    // ← Added Here.
+                    destinations:[
                       NavigationRailDestination(
                         icon: Icon(Icons.home),
                         label: Text('Home'),
+
                       ),
                       NavigationRailDestination(
                         icon: Icon(Icons.favorite),
@@ -165,16 +173,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                     // selectedIndex: 0,
-                    selectedIndex: selectedIndexNum, // ← Change to this.
-
+                    selectedIndex: selectedIndexNum,
+                    // ← Change to this.
 
                     // When the onDestinationSelected callback is called,
                     // instead of merely printing the new value to console,
-                    // you assign it to selectedIndex inside a setState() call.
+                    // you assign it to selectedIndexNum inside a setState() call.
                     // This call is similar to the notifyListeners() method
                     // used previously—it makes sure that the UI updates:
-                    onDestinationSelected: (value)
-                    {
+                    onDestinationSelected: (value) {
                       // print('selected: $value');
 
                       // ↓ Replaced print with this.
@@ -190,15 +197,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Theme.of(context).colorScheme.primaryContainer,
                   // child: GeneratorPage(),
 
-                  child: page,  // ← Added Here.
+                  child: page, // ← Added Here.
                 ),
-
               ),
             ],
           ),
-        );
-      }
-    );
+        ),
+      );
+    });
   }
 }
 
@@ -209,12 +215,12 @@ class GeneratorPage extends StatelessWidget {
     var pair = appState.current;
 
     IconData icon;
+
     if (appState.favorites.contains(pair)) {
       icon = Icons.favorite;
     } else {
       icon = Icons.favorite_border;
     }
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -232,11 +238,12 @@ class GeneratorPage extends StatelessWidget {
                 label: Text('Like'),
               ),
               SizedBox(width: 10),
-              ElevatedButton(
+              ElevatedButton.icon(
                 onPressed: () {
                   appState.getNext();
                 },
-                child: Text('Next'),
+                icon: Icon(Icons.navigate_next),
+                label: Text('Next'),
               ),
             ],
           ),
