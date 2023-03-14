@@ -284,7 +284,7 @@ class BigCard extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Text(
             pair.asPascalCase,
-            style: theme.textTheme.displayMedium,
+            style: theme.textTheme.displaySmall,
           ),
         ),
       ),

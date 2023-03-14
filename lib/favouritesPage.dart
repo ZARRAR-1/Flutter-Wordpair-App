@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'main.dart';
 
 class Favourites extends StatefulWidget {
@@ -11,20 +10,15 @@ class Favourites extends StatefulWidget {
 }
 
 class _FavouritesState extends State<Favourites> {
-
-
   @override
   Widget build(BuildContext context) {
-
     var appState = context.watch<MyAppState>();
-
 
     if (appState.favorites.isEmpty) {
       return Center(
         child: Text('No favorites yet.'),
       );
     }
-
 
     return ListView(
       children: [
@@ -38,16 +32,16 @@ class _FavouritesState extends State<Favourites> {
             leading: Icon(Icons.favorite),
             title: Text(pair.asLowerCase),
             trailing: IconButton(
-                onPressed: () {
-                  //Code Behaviour
-                  setState(() {
-                    appState.favorites.remove(pair);
-                  });
-                },
-                icon: Icon(Icons.delete_forever)),
+              onPressed: () {
+                //Code Behaviour
+                setState(() {
+                  appState.favorites.remove(pair);
+                });
+              },
+              icon: Icon(Icons.delete_forever),
+            ),
           ),
       ],
     );
   }
-
 }
