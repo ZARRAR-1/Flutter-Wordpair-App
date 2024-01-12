@@ -1,17 +1,7 @@
 # Word-Pair-App Flutter
 
-A new Flutter project.
-
-## Getting Started
-
 A simple, yet beautiful and responsive flutter application generating exciting & cool word pairs.
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Screenshots:
+![Screenshot_2024-01-12-23-37-29-335_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/3e066f2f-17a6-40ca-bd2b-b681ecfee0cf)
