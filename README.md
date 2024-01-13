@@ -5,14 +5,12 @@ This project is a starting point for a Flutter application.
 
 Screenshots:
 
-![Screenshot_2024-01-12-23-31-56-995_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/49c9cf5a-5b31-4da9-af5a-d22da913e991)
+![image](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/6be23935-8ae5-43d7-ac13-b9aaa286e238)
 
-![Screenshot_2024-01-12-23-32-14-479_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/1612476f-f886-4ea8-affd-547b9320caa4)
+![image](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/780974f9-4d16-48e6-8de3-d1be6d531ff5)
 
-![Screenshot_2024-01-12-23-32-20-133_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/6e54eb0d-ea48-4dde-9c9c-696ce9b20699)
+![image](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/4844cc73-c38c-42b5-9892-a9de951971ca)
 
-![Screenshot_2024-01-12-23-32-27-283_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/345771b3-d9e4-48f1-9903-bcc8a170a98d)
+![image](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/9306918e-0c61-44a2-a4c2-8c4126499e63)
 
-![Screenshot_2024-01-12-23-32-34-733_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/1cc31d9f-eab3-48ca-a83b-00e25597a558)
-
-![Screenshot_2024-01-12-23-37-29-335_com example smd_1](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/3e066f2f-17a6-40ca-bd2b-b681ecfee0cf)
+![image](https://github.com/ZARRAR-1/Flutter-Wordpair-App/assets/106697920/08decf40-4dc7-4087-b914-e3d505704c51)
