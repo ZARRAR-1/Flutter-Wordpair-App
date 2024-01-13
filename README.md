@@ -1,7 +1,6 @@
 # Word-Pair-App Flutter
 
-A simple, yet beautiful and responsive flutter application generating exciting & cool word pairs.
-This project is a starting point for a Flutter application.
+A simple, yet beautiful and responsive flutter application generating exciting & cool word pairs. Application implements responsive UI design and stores favourite wordpairs using Shared preference package.
 
 Screenshots:
 
